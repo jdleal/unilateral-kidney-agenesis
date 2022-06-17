@@ -1,15 +1,14 @@
 # unilateral-kidney-agenesis
 module load R
 R
-#load SAIGE
+# load SAIGE
 .libPaths(c(".../R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
 library(SAIGEgds)
-#load other packages
+# load other packages
 .libPaths(c(".../R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
 library(SeqArray)
 library(SNPRelate)
 library(GWASTools)
-# set address
 setwd(".../missingKidney/")
 # open the GDS file for genetic relationship matrix (GRM)
 # save PLINK files in .../missingKidney/data/
@@ -25,7 +24,7 @@ seqSummary("out.gds", varname=NULL, check=c("default", "none", "full"),
            verbose=TRUE)
 pheno <- read.table("./data/unilateralKidneyAgenesisPhenotype.txt", header=TRUE, as.is=TRUE)
 head(pheno2)
-# model 0
+# perform the association analysis, model 0
 glmm0 <- seqFitNullGLMM_SPA(missing ~ 1, pheno, "out.gds", trait.type="binary", num.thread=15)
 assoc0 <- seqAssocGLMM_SPA("out.gds", glmm0, mac=10)
 head(assoc0)
