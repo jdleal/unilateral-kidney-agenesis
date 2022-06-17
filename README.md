@@ -2,10 +2,10 @@
 module load R
 R
 # load SAIGE
-.libPaths(c(".../R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
+.libPaths(c("./software/R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
 library(SAIGEgds)
 # load other packages
-.libPaths(c(".../R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
+.libPaths(c("./software/R/x86_64-pc-linux-gnu-library/3.6", .libPaths()))
 library(SeqArray)
 library(SNPRelate)
 library(GWASTools)
