@@ -1,4 +1,4 @@
-# unilateral renal agenesis (URA)
+# Unilateral renal agenesis (URA) code for SAIGEgds
 module load R
 R
 # load SAIGE
