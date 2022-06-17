@@ -1,4 +1,4 @@
-# unilateral-kidney-agenesis
+# unilateral renal agenesis (URA)
 module load R
 R
 # load SAIGE
